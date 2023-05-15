@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+<!doctype html>
+<html lang="en" data-bs-theme="auto">
+    <head>
+        <link rel="stylesheet" href="{% static 'page/contact.css' %}">
+        <style>
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <form action="{% url 'contact' %}" method="POST">
+              {% csrf_token %}
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name..">
+              <label for="email">Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email..">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="massage's title..">
+              <label for="massage">Massage</label>
+              <textarea id="massage" name="massage" placeholder="Write something.." style="height:200px"></textarea>
+              <input type="submit" value="Submit">
+              <script src="{% static 'page/contact.js' %}"></script>
+            </form>
+          </div>
+    </body>
+</html>
+{% endblock %}
