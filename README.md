@@ -47,15 +47,15 @@ py -m venv env.
 ```
 5. Activate the virtual environment by running
 ```
- .\env\Scripts\activate.
+ .\env\Scripts\activate
 ```
 6. Install Django by running 
 ```
-pip install Django.
+pip install Django
 ```
 7. Run the server by running python manage.py runserver.
 ```
-python manage.py runserver.
+python manage.py runserver
 ```
 
 ## Contributor ✍️
